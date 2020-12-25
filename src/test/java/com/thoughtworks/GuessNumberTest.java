@@ -55,7 +55,7 @@ class GuessNumberTest {
 
         String result = guessNumber.guess("8246");
 
-        assertEquals("4A0B", result);
+        assertEquals("1A1B", result);
     }
 
     @Test
@@ -73,7 +73,7 @@ class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
-        String result = guessNumber.guess("1567");
+        String result = guessNumber.guess("9567");
 
         assertEquals("0A0B", result);
     }
@@ -83,7 +83,7 @@ class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
-        assertThrows(NumberDuplicateException.class, () -> guessNumber.guess("1175"));
+        assertThrows(IllegalArgumentException.class, () -> guessNumber.guess("1175"));
     }
 
     @Test
@@ -91,6 +91,6 @@ class GuessNumberTest {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
-        assertThrows(NumberCountException.class, () -> guessNumber.guess("12"));
+        assertThrows(IllegalArgumentException.class, () -> guessNumber.guess("12"));
     }
 }
