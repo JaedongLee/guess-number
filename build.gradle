@@ -15,8 +15,11 @@ dependencies {
     testCompile "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
     testCompile "org.mockito:mockito-core:3.+"
+    compile group: 'cn.hutool', name: 'hutool-all', version: '5.5.4'
+
 }
 
 test {
     useJUnitPlatform()
 }
+
