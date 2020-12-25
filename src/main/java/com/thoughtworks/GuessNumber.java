@@ -1,10 +1,7 @@
 package com.thoughtworks;
 
-import cn.hutool.core.util.StrUtil;
-import com.thoughtworks.util.StringUtils;
-
-import static cn.hutool.core.util.StrUtil.*;
-import static com.thoughtworks.util.StringUtils.*;
+import static cn.hutool.core.util.StrUtil.isBlank;
+import static com.thoughtworks.util.StringUtils.isDistinct;
 
 public class GuessNumber {
     private final AnswerGenerator answerGenerator;
