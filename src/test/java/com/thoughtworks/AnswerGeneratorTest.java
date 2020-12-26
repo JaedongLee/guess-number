@@ -13,13 +13,14 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 class AnswerGeneratorTest {
-
     private static Random mockRandom;
 
     @BeforeAll
     static void setUp() {
         mockRandom = mock(Random.class);
-        when(AnswerGeneratorTest.mockRandom.nextInt(anyInt())).thenReturn(7890);
+        when(AnswerGeneratorTest.mockRandom.nextInt(anyInt()))
+                .thenReturn(7890)
+                .thenReturn(7890);
     }
 
     @Test

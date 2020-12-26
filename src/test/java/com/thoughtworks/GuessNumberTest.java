@@ -18,7 +18,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_all_right_and_location_all_right() {
+    void return_total_A_zero_B_when_number_all_right_and_location_all_right() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -28,7 +28,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_all_right_and_location_part_right() {
+    void return_n_A_4_sub_n_B_when_number_all_right_and_location_part_right() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -38,7 +38,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_all_right_and_location_all_wrong() {
+    void return_0_A_total_B_when_number_all_right_and_location_all_wrong() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -48,7 +48,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_part_right_and_location_part_right() {
+    void return_n_A_m_B_n_plus_m_less_than_4_when_number_part_right_and_location_part_right() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -58,7 +58,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_part_right_and_location_all_wrong() {
+    void return_0_A_n_B_n_less_than_4_when_number_part_right_and_location_all_wrong() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -68,7 +68,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_all_wrong_and_location_all_wrong() {
+    void return_0_A_0_B_when_number_all_wrong_and_location_all_wrong() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -78,7 +78,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_duplicate() {
+    void throw_IllegalArgumentException_when_number_duplicate() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 
@@ -86,7 +86,7 @@ class GuessNumberTest {
     }
 
     @Test
-    void when_number_count_lower_than_four() {
+    void throw_IllegalArgumentException_when_number_count_lower_than_four() {
         GuessNumber guessNumber = new GuessNumber(answerGenerator);
         guessNumber.start();
 

@@ -19,7 +19,7 @@ public class GuessNumber {
     }
 
     public String guess(String userInput) {
-        if (isBlank(userInput) || userInput.length() < 4 || !isDistinct(userInput)) {
+        if (isBlank(userInput) || userInput.length() < answer.length() || !isDistinct(userInput)) {
             throw new IllegalArgumentException();
         }
         char[] guess = userInput.toCharArray();
