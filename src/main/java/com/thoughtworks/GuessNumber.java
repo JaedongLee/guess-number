@@ -22,12 +22,12 @@ public class GuessNumber {
         if (isBlank(userInput) || userInput.length() < 4 || !isDistinct(userInput)) {
             throw new IllegalArgumentException();
         }
-        char[] guessChars = userInput.toCharArray();
+        char[] guess = userInput.toCharArray();
         int a = 0;
         int b = 0;
-        for (int i = 0; i < guessChars.length; i++) {
-            char guessChar = guessChars[i];
-            int index = answer.indexOf(guessChar);
+        for (int i = 0; i < guess.length; i++) {
+            char c = guess[i];
+            int index = answer.indexOf(c);
             if (index == i) {
                 a++;
                 continue;
